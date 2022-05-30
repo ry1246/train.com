@@ -5,3 +5,19 @@ body {
 h1 {
   color : red;
 }
+
+#sign_in {
+position: relative;
+left: 40px;
+}
+
+#sign_up {
+  position: relative;
+  left: 40px;
+} 
+
+#guest {
+  position: relative;
+  top: 30px;
+  right: 70px;
+}
