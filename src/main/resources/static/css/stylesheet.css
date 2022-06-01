@@ -11,7 +11,7 @@ h1 {
 
 #sign_in {
   position: relative;
-  left: 80px;
+  left: 50px;
   width: 150px;
   height: 50px;
   background-color: rgb(59, 57, 57);
@@ -29,7 +29,7 @@ h1 {
 
 #sign_up {
   position: relative;
-  left: 80px;
+  left: 110px;
   width: 150px;
   height: 50px;
   background-color: rgb(59, 57, 57);
