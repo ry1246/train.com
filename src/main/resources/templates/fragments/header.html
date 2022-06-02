@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" th:href="@{/css/header.css}">
+    </head>
+    <body>
+        <header th:fragment="header">
+            <h2>Train.com</h2>
+            
+            <!-- サインアウトbuttonはログイン済みの時に出す、ログイン画面ではサインアップbuttonを設置 -->
+            <button type="button" id="sign_out" onclick="location.href='#'">Sign out</button>
+        </header>
+    </body>
+</html>
