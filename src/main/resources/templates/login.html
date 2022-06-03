@@ -7,6 +7,17 @@
 </head>
 <body>
     <div th:replace="~{fragments/header :: header}"></div>
+
+    <form action="" method="post" class="login_form">
+        <div id="login_name">
+            <label for="name">Enter your name</label>
+            <input type="text" name="name" required>
+        </div>
+        <div id="login_pass">
+            <label for="pass">Enter your password</label>
+            <input type="password" name="pass" required>
+        </div>
+    </form>
     
 </body>
 </html>
