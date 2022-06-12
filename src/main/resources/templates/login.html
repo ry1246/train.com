@@ -7,18 +7,30 @@
 </head>
 
 <!-- 細かなスタイリングはログイン機能実装し、ヘッダー配置後 -->
+<!-- name, login_id, login_passにformを変更 -->
 <body>
     <div th:replace="~{fragments/header :: header}"></div>
 
-    <form action="" method="post" class="login_form">
-        <div id="login_name">
-            <label for="name">Enter your name</label>
+    <div th:if="${param.error}">
+        Invalid UserName, ID and Password!!
+    </div>
+    <div th:if="${param.logout}">
+        You have been logged out.
+    </div>
+    <form th:action="@{/login}" method="post" class="login_form">
+        <div id="user_name">
+            <label for="name">USER NAME : </label>
             <input type="text" name="name" required>
         </div>
+        <div id="login_id">
+            <label for="id">Login ID : </label>
+            <input type="text" name="id" required>
+        </div>
         <div id="login_pass">
-            <label for="pass">Enter your password</label>
+            <label for="pass">Login PASSWORD : </label>
             <input type="password" name="pass" required>
         </div>
+        <div><input type="submit" value="Sign In"/></div>
     </form>
 
 </body>
