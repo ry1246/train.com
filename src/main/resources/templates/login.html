@@ -11,27 +11,29 @@
 <body>
     <div th:replace="~{fragments/header :: header}"></div>
 
-    <div th:if="${param.error}">
+    <!-- JavaScriptを使ってポップアップにしてもいい気がする (二度目以降が表示されたままでわかりづらいため)-->
+    <div th:if="${param.error}" id="invalid_msg">
         Invalid UserName, ID and Password!!
     </div>
-    <div th:if="${param.logout}">
+    <div th:if="${param.logout}" id="logout_msg">
         You have been logged out.
     </div>
     <form th:action="@{/login}" method="post" class="login_form">
-        <div id="user_name">
-            <label for="name">USER NAME : </label>
-            <input type="text" name="name" required>
+        <div class="inner_form">
+            <div id="user_name">
+                <label for="name">USER NAME</label>
+                <input type="text" name="name" class="form">
+            </div>
+            <div id="login_id">
+                <label for="id">Login ID</label>
+                <input type="text" name="id" class="form" required>
+            </div>
+            <div id="login_pass">
+                <label for="pass">Login PASS</label>
+                <input type="password" name="pass" class="form" required>
+            </div>
+            <div><input type="submit" value="Sign In" id="submit_btn"></div>
         </div>
-        <div id="login_id">
-            <label for="id">Login ID : </label>
-            <input type="text" name="id" required>
-        </div>
-        <div id="login_pass">
-            <label for="pass">Login PASSWORD : </label>
-            <input type="password" name="pass" required>
-        </div>
-        <div><input type="submit" value="Sign In"/></div>
     </form>
-
 </body>
 </html>
