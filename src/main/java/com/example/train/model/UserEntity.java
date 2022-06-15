@@ -6,6 +6,7 @@ import javax.persistence.Table;
 import javax.persistence.Id;
 import javax.validation.constraints.Size;
 
+import com.sun.istack.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,6 +20,7 @@ public class UserEntity {
   @Column(name = "id", nullable = false)
   private Long id;
 
+  @NotNull
   @Size(min = 4, max = 20)
   @Column(name = "name")
   private String userName;
