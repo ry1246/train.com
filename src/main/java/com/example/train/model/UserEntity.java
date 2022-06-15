@@ -21,7 +21,7 @@ public class UserEntity {
   private Long id;
 
   @NotNull
-  @Size(min = 4, max = 20)
+  @Size(min = 4, max = 10)
   @Column(name = "name")
   private String userName;
 
