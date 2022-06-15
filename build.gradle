@@ -20,7 +20,8 @@ dependencies {
 //	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 //	runtimeOnly 'mysql:mysql-connector-java'
 
-// Spring Securityのコメントを外すと、見慣れない表示画面が出現（調べてから設定のため、一旦コメントアウト）
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	testImplementation 'org.springframework.security:spring-security-test'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
