@@ -11,8 +11,8 @@ public class FrontController {
         return "index";
     }
 
-    @GetMapping("/login")
+    @GetMapping("/loginForm")
     String login() {
-        return "login";
+        return "loginForm";
     }
 }
